@@ -1,0 +1,27 @@
+$HWROOT/mips1_top/rtl/mips1_top.v
+$HWROOT/mips1_top/rtl/cpu_icache.v
+$HWROOT/common/rtl/wb_write_buffer.v
+$HWROOT/common/rtl/wb_master.v
+$HWROOT/common/rtl/wb_spram_wrap.v
+$HWROOT/common/rtl/spram.v
+$HWROOT/common/rtl/dpram.v
+$HWROOT/common/rtl/wb_arb_4m_1s.v
+
+// Can use BFM or real CPU Core depending on a define 
+-v $HWROOT/mips1_core/rtl/cpu_core_bfm.v 
+-v $HWROOT/mips1_core/rtl/cpu_core.v 
+-v $HWROOT/mips1_core/rtl/mult.v 
+-v $HWROOT/mips1_core/rtl/div.v 
+-f $HWROOT/mips1_cop0/rtl/filelist.lst
+
++incdir+$HWROOT/mips1_top/rtl/inc
++incdir+$HWROOT/mips1_core/rtl/inc 
++incdir+$HWROOT/common/rtl/inc 
+
+
+
+
+
+
+
+

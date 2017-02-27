@@ -1,0 +1,6 @@
++incdir+$HWROOT/mips1_core/rtl/inc
++incdir+$HWROOT/common/rtl/inc
+$HWROOT/mips1_core/tb/cpu_core_monitor_pkg.sv
+$HWROOT/mips1_core/tb/tb_top.v
+$HWROOT/common/tb/wb_slave_bfm.v
+$HWROOT/mips1_core/tb/cpu_core_monitor.v

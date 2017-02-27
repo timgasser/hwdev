@@ -1,0 +1,70 @@
+#!/bin/bash
+
+
+# Build up the assembly tools paths
+gnuDir="/home/tim/bin/x-tools/mipsel-unknown-linux-gnu/bin"
+gnuPrefix="mipsel-unknown-linux-gnu-"
+
+gnuAs="${gnuDir}/${gnuPrefix}as"
+gnuGcc="${gnuDir}/${gnuPrefix}gcc"
+gnuLd="${gnuDir}/${gnuPrefix}ld"
+gnuDump="${gnuDir}/${gnuPrefix}objdump"
+gnuCopy="${gnuDir}/${gnuPrefix}objcopy"
+
+asFlags="-EL -mips1";
+cFlags="-EL -c -O0 -mno-float -mips1 ";
+ldFlags="-EL  --script ld.script -eentry -s -N -Map test.map"; 
+dumpFlags="-D -EL -w -z --disassembler-options=no-aliases,reg-names=numeric";
+copyFlags="--only-section .text -O ihex -S";
+
+cmdAs="${gnuAs} ${asFlags}"
+cmdGcc="${gnuGcc} ${cFlags}"
+cmdLd="${gnuLd} ${ldFlags}"
+cmdDump="${gnuDump} ${dumpFlags}"
+cmdCopy="${gnuCopy} ${copyFlags}"
+
+cmdHexToRom="$HWROOT/common/scripts/hex2imem.pl"
+
+# Need to instantiate a testcase.v in the testbench anyway. Check for the assembly
+# as a first priority, as the testcase.v will always be there
+if [ -f "testcase.s" ]
+then
+
+    echo "[INFO ] Found testcase.s, running MIPS1 Core-based test .."
+#    echo $cmdAs    
+#    echo $cmdGcc   
+#    echo $cmdLd    
+#    echo $cmdDump  
+#    echo $cmdCopy  
+
+    $cmdAs testcase.s -o testcase.o
+    $cmdDump testcase.o > testcase.lst
+    $cmdCopy testcase.o testcase.ihex
+    srec_cat testcase.ihex -Intel -Output testcase.hex -VMem 8
+    $cmdHexToRom testcase.hex testcase_rom.v
+
+    rm -fvr work
+    vlib work
+    vlog  -f ../../vlog_common.args -f ../../vlog_core.args | tee vlog.log
+    vsim -f ../../vsim.args | tee vsim.log
+    
+    grep --ignore-case error *.log
+
+
+elif [ -f "testcase.v" ]
+then
+
+    echo "[INFO ] Found testcase.v, running MIPS1 BFM-based test .."
+
+    rm -fvr work
+    vlib work
+    vlog -f ../../vlog_common.args -f  ../../vlog_bfm.args | tee vlog.log
+    vsim -f ../../vsim.args | tee vsim.log
+    
+    grep --ignore-case error *.log
+
+
+
+fi
+
+

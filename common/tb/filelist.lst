@@ -1,0 +1,8 @@
+-v $HWROOT/common/tb/cellram.v
+-v $HWROOT/common/tb/clk_rst_gen.v
+-v $HWROOT/common/tb/epp_master_bfm.v
+-v $HWROOT/common/tb/vga_slave_monitor.v
+-v $HWROOT/common/tb/wb_master_bfm.v
+-v $HWROOT/common/tb/wb_slave_bfm.v
+-v $HWROOT/common/tb/wb_slave_trace.v
++incdir+$HWROOT/common/tb/inc

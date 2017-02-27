@@ -1,0 +1,4 @@
+// Always put the testcase first. Then any defines are used in subsequent compilation
+testcase.v
+-f $HWROOT/mips1_top/rtl/filelist.lst
+-f $HWROOT/mips1_top/tb/filelist.lst

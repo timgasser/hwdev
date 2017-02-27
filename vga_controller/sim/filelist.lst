@@ -1,0 +1,3 @@
+-f $HWROOT/vga_controller/tb/filelist.lst
+-f $HWROOT/vga_controller/rtl/filelist.lst
+testcase.v

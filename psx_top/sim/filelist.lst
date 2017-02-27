@@ -1,0 +1,5 @@
+// Put the testcase first so the defines apply to subsequent files
+// Make sure -mfcu is defined in the vlog args too..
+testcase.v
+-f $HWROOT/psx_top/rtl/filelist.lst
+-f $HWROOT/psx_top/tb/filelist.lst

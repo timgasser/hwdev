@@ -1,0 +1,3 @@
+-f $HWROOT/adi/tb/filelist.lst
+-f $HWROOT/adi/rtl/filelist.lst
+testcase.v

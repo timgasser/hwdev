@@ -1,0 +1,3 @@
+-f $HWROOT/sdram_controller/rtl/filelist.lst
+-f $HWROOT/sdram_controller/tb/filelist.lst
+testcase.v

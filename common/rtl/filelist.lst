@@ -1,0 +1,11 @@
+-v $HWROOT/common/rtl/async_fifo_fifomem.v
+-v $HWROOT/common/rtl/async_fifo_rptr_empty.v
+-v $HWROOT/common/rtl/async_fifo_sync_r2w.v
+-v $HWROOT/common/rtl/async_fifo_sync_w2r.v
+-v $HWROOT/common/rtl/async_fifo.v
+-v $HWROOT/common/rtl/async_fifo_wptr_full.v
+-v $HWROOT/common/rtl/dpram.v
+-v $HWROOT/common/rtl/spram.v
+-v $HWROOT/common/rtl/sync_fifo.v
+-v $HWROOT/common/rtl/wb_arb_2m_1s.v
+-v $HWROOT/common/rtl/wb_master.v

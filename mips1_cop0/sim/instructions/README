@@ -1,0 +1,17 @@
+Instructions:
+
+There is a control and status register at register 20 in the COP0, which is used to check the instructions below. 
+The existing Cause, Status, EPC, etc registers aren't read/write, or have a mixture of read/write bits which makes it difficult to test otherwise.
+The Compare register could be used, but it is only a GPR, not a control register so can't check CTC / CFC, etc.
+
+Each test is self-checking.
+Each test is written in assembly.
+
+RFE  : 
+MFCz :
+MTCz :
+LWCz :
+SWCz :
+CTCz :
+CFCz :
+COPz :

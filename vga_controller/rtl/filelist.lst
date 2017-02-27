@@ -1,0 +1,6 @@
+$HWROOT/vga_controller/rtl/vga_cdc.v
+$HWROOT/vga_controller/rtl/vga_dma.v
+$HWROOT/vga_controller/rtl/vga_driver.v
+$HWROOT/vga_controller/rtl/vga_top.v
+-f $HWROOT/common/rtl/filelist.lst
+-f $HWROOT/common/fpga/filelist.lst

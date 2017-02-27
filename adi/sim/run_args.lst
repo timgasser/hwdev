@@ -1,0 +1,1 @@
+-novopt -c -debugDB=vsim.dbg -wlf vsim.wlf -do "add log -r /* ; run -all" TB_ADI

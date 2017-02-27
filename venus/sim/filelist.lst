@@ -1,0 +1,4 @@
+-f $HWROOT/common/rtl/filelist.lst
+-f $HWROOT/venus/tb/filelist.lst
+-f $HWROOT/venus/rtl/filelist.lst
+testcase.v

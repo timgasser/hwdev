@@ -1,0 +1,6 @@
+$HWROOT/mips1_top/tb/tb_top.v
+$HWROOT/common/tb/wb_master_bfm.v
+$HWROOT/common/tb/wb_slave_bfm.v
+$HWROOT/common/tb/clk_rst_gen.v
++incdir+$HWROOT/mips1_top/tb/inc
+

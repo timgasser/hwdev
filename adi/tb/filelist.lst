@@ -1,0 +1,3 @@
+$HWROOT/adi/tb/tb_adi.v
+$HWROOT/common/tb/epp_master_bfm.v
+$HWROOT/common/tb/wb_slave_bfm.v

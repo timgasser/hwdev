@@ -1,0 +1,8 @@
+// This is a comment ! Check it gets picked up
+$HWROOT/mips1_cop0/sim
+$HWROOT/mips1_core/sim
+$HWROOT/mips1_top/sim
+$HWROOT/psx_top/sim/platform_ram
+$HWROOT/sdram_controller/sim
+$HWROOT/vga_controller/sim
+

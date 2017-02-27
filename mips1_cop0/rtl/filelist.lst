@@ -1,0 +1,3 @@
+$HWROOT/mips1_cop0/rtl/cop0.v
+
++incdir+$HWROOT/mips1_cop0/rtl/inc

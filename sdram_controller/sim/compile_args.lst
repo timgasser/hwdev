@@ -1,0 +1,1 @@
+-sv -hazards -timescale "1 ns / 1 ps" -incr -novopt +define+REPORT_FIFO

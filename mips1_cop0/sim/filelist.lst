@@ -1,0 +1,4 @@
+-f $HWROOT/mips1_core/rtl/filelist.lst
+-f $HWROOT/mips1_cop0/rtl/filelist.lst
+-f $HWROOT/mips1_cop0/tb/filelist.lst
+testcase.v

@@ -1,0 +1,5 @@
+$HWROOT/sdram_controller/tb/sdram_controller_tb.v
+$HWROOT/common/tb/clk_rst_gen.v
+$HWROOT/common/tb/wb_master_bfm.v
+$HWROOT/common/tb/cellram.v
++incdir+$HWROOT/common/tb/inc

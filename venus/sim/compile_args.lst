@@ -1,0 +1,2 @@
+-sv -hazards -timescale "1 ns / 1 ps" -incr -novopt  +define+TB=TB_BOARD_TOP +define+EPP_MASTER=TB_BOARD_TOP.epp_master_bfm +define+RST=TB_BOARD_TOP.board_top.fpga_top.fpga_bus_top.digital_top.RST_ASYNC_33M +define+CRAM=TB_BOARD_TOP.board_top.cellram
+

@@ -1,0 +1,4 @@
++incdir+$HWROOT/mips1_cop0/tb/inc
+$HWROOT/mips1_cop0/tb/tb_top.v
+$HWROOT/common/tb/wb_slave_bfm.v
+// $HWROOT/mips1_cop0/tb/cpu_core_monitor.v

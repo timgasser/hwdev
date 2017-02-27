@@ -1,0 +1,12 @@
+$HWROOT/psx_top/tb/mips1_core_monitor_pkg.sv
+$HWROOT/psx_top/tb/tb_top.v
+-v $HWROOT/common/tb/wb_slave_trace.v
+-v $HWROOT/common/tb/wb_slave_bfm.v
+-v $HWROOT/common/tb/wb_master_bfm.v
+$HWROOT/common/tb/clk_rst_gen.v
+$HWROOT/psx_top/tb/mips1_core_monitor.v
++incdir+$HWROOT/psx_top/rtl/inc
++incdir+$HWROOT/common/rtl/inc
++incdir+$HWROOT/psx_top/tb/inc 
++incdir+$HWROOT/mips1_top/rtl/inc 
++incdir+$HWROOT/mips1_core/rtl/inc 

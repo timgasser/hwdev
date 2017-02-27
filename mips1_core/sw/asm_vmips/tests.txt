@@ -1,0 +1,29 @@
+addi.s     - test working, par file
+add.s      - test working, par file
+bc0.s      - *** no co-processor 0 yet ***
+bgezal.s   - test working, par file
+bgtz.s     - test working, par file
+blez.s     - test working, par file
+bltzal.s   - test working, par file
+bltz.s     - test working, par file
+coproc.s   - *** no co-processor 0 yet ***
+divu.s     - test FAIL, par file
+haltdev.s  - *** wtf is this ?
+handler5.s - *** no test, par file
+jalr.s     - hangs in simulation, test seems to be broken
+load.s     - test working, par file
+logical.s  - test working, par file
+lwl.s      - deleted 
+lwr.s      - deleted 
+mthi_lo.s  - test working, par file
+multu.s    - test working, par file
+mumble.s   - test working, par file  
+shift.s    - test working, par file  
+slti.s     - test working, par file 
+sltiu.s    - test working, par file 
+srlv.s     - test working, par file 
+store.s    - test working, par file
+sub.s      - test working, par file
+syscall.s  - need to add co proc 0 <- just commented out for now
+tlbwr.s    - need to add co proc 0 <- just commented out for now
+xor.s      - test working, par file

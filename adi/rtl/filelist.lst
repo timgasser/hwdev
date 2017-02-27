@@ -1,0 +1,5 @@
+$HWROOT/adi/rtl/epp_bus_bridge.v
+$HWROOT/adi/rtl/epp_slave.v
+$HWROOT/common/rtl/wb_master.v
+$HWROOT/adi/rtl/adi_top.v
++incdir+$HWROOT/adi/rtl/inc

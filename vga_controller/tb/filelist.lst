@@ -1,0 +1,6 @@
++incdir+$HWROOT/common/rtl/inc
++incdir+$HWROOT/vga_controller/tb/inc
+
+$HWROOT/vga_controller/tb/tb_top.v
+$HWROOT/common/tb/wb_slave_bfm.v
+$HWROOT/common/tb/vga_slave_monitor.v

@@ -1,0 +1,3 @@
+// This file contains all the sources to be compiled into testbench.
+// These lines are to check the comment is working .. 
+$HWROOT/psx_top/dpi/mips1_core_model.c

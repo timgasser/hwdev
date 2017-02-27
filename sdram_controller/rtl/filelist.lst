@@ -1,0 +1,3 @@
+$HWROOT/sdram_controller/rtl/sdram_controller.v
+$HWROOT/common/rtl/sync_fifo.v
++incdir+$HWROOT/sdram_controller/rtl/inc

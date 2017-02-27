@@ -1,0 +1,13 @@
+# Output products list for <div_32bit>
+_xmsgs/pn_parser.xmsgs
+div_32bit.asy
+div_32bit.gise
+div_32bit.ngc
+div_32bit.sym
+div_32bit.v
+div_32bit.veo
+div_32bit.xco
+div_32bit.xise
+div_32bit_flist.txt
+div_32bit_readme.txt
+div_32bit_xmdf.tcl

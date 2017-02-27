@@ -1,0 +1,92 @@
+#!/bin/bash
+# 
+# TODO:
+# -----
+# 
+# - Stop the process if the C / ASM compilation fails with an error message
+# - Add C compilation flow as well as assembly 
+# 
+# 
+# 
+# 
+
+# Store start time
+startTime=$(date +%s)
+
+# Build up the assembly tools paths
+gnuDir="/home/tim/bin/x-tools/mipsel-unknown-elf/bin"
+gnuPrefix="mipsel-unknown-elf-"
+
+gnuAs="${gnuDir}/${gnuPrefix}as"
+gnuGcc="${gnuDir}/${gnuPrefix}gcc"
+gnuLd="${gnuDir}/${gnuPrefix}ld"
+gnuDump="${gnuDir}/${gnuPrefix}objdump"
+gnuCopy="${gnuDir}/${gnuPrefix}objcopy"
+
+asFlags="-EL -mips1";
+cFlags="-EL -c -O0 -mno-float -mips1 ";
+ldFlags="-EL  --script ld.script -eentry -s -N -Map test.map"; 
+dumpFlags="-D -EL -w -z --disassembler-options=no-aliases,reg-names=numeric";
+copyFlags="--only-section .text -O ihex -S";
+
+cmdAs="${gnuAs} ${asFlags}"
+cmdGcc="${gnuGcc} ${cFlags}"
+cmdLd="${gnuLd} ${ldFlags}"
+cmdDump="${gnuDump} ${dumpFlags}"
+cmdCopy="${gnuCopy} ${copyFlags}"
+
+cmdHexToRom="$HWROOT/common/scripts/hex2imem.pl"
+
+
+echo "[INFO ] Finding tests .."
+testList=$(find ./* -name testcase.v)
+for currTest in $testList ; do
+
+    cd `dirname $currTest`
+    
+# Need to instantiate a testcase.v in the testbench anyway. Check for the assembly
+# as a first priority, as the testcase.v will always be there
+    if [ -f "testcase.s" ]
+    then
+	echo "[INFO ] Found testcase.s, compiling assembly and linking for test .."
+
+	$cmdAs testcase.s -o testcase.o
+	$cmdDump testcase.o > testcase.lst
+	$cmdCopy testcase.o testcase.ihex
+	srec_cat testcase.ihex -Intel -Output testcase.hex -VMem 8
+	$cmdHexToRom testcase.hex testcase_rom.v
+
+
+    elif [ -f "testcase.v" ]
+    then
+	echo "[INFO ] Found testcase.v, running verilog-based test .."
+    fi
+
+
+    rm -fr work
+    vlib work
+    vlog  -f ../../filelist.lst -f ../../compile_args.lst | tee vlog.log
+    vsim -f ../../run_args.lst | tee vsim.log
+
+    cd -
+
+done
+
+
+
+endTime=$(date +%s)
+
+
+echo ""
+echo "**************************************"
+echo "***** The following tests PASSED *****"
+echo "**************************************"
+find ./* -name 'vsim.log' -exec grep -i -Hn 'PASS' {} \;
+echo ""
+echo "**************************************"
+echo "***** The following tests FAILED *****"
+echo "**************************************"
+find ./* -name 'vsim.log' -exec grep -i -Hn 'FAIL' {} \;
+echo ""
+echo ""
+echo "Regression time: $((endTime - startTime)) seconds"

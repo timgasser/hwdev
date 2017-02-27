@@ -1,0 +1,11 @@
+-v $XILINX/verilog/src/unisims/BUFGCE.v
+-v $XILINX/verilog/src/unisims/BUFGMUX.v
+-v $XILINX/verilog/src/unisims/INV.v
+-v $XILINX/verilog/src/unisims/IBUFG.v
+-v $XILINX/verilog/src/unisims/BUFG.v
+-v $XILINX/verilog/src/unisims/DCM_SP.v
+-v $XILINX/verilog/src/unisims/SRL16.v
+-v $XILINX/verilog/src/glbl.v
+
+$HWROOT/common/fpga/fpga_top.v 
+

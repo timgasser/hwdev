@@ -1,0 +1,3 @@
+// This file contains all the sources to be compiled into testbench.
+// These lines are to check the comment is working .. 
+$HWROOT/mips1_core/dpi/mlite_dpi.c

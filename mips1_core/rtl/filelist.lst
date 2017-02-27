@@ -1,0 +1,6 @@
+$HWROOT/mips1_core/rtl/cpu_core.v 
+$HWROOT/mips1_core/rtl/mult.v 
+$HWROOT/mips1_core/rtl/div.v 
+
++incdir+$HWROOT/mips1_core/rtl/inc 
++incdir+$HWROOT/common/rtl/inc

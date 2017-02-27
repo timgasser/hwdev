@@ -1,0 +1,4 @@
+$HWROOT/venus/tb/board_top.v
+$HWROOT/venus/tb/tb_board_top.v
+$HWROOT/common/tb/btn_sw_bfm.v
+-f $HWROOT/common/tb/filelist.lst

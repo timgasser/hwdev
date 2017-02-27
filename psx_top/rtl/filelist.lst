@@ -1,0 +1,18 @@
++incdir+$HWROOT/psx_top/rtl/inc
+
+$HWROOT/psx_top/rtl/dmac_ot.v
+$HWROOT/psx_top/rtl/dmac_peri.v
+$HWROOT/psx_top/rtl/dmac_li.v
+$HWROOT/psx_top/rtl/dmac_top.v
+$HWROOT/psx_top/rtl/dmac_arb.v
+$HWROOT/psx_top/rtl/dmac_wb_regs.v
+$HWROOT/psx_top/rtl/intc.v
+$HWROOT/psx_top/rtl/psx_bus.v
+$HWROOT/psx_top/rtl/psx_top.v
+$HWROOT/psx_top/rtl/root_cnt.v
+$HWROOT/common/rtl/wb_arb_2m_1s.v
+$HWROOT/common/rtl/wb_slave_ctrl.v
+$HWROOT/common/rtl/wb_sync_bridge.v
+
+-f $HWROOT/mips1_top/rtl/filelist.lst
+-f $HWROOT/common/rtl/filelist.lst

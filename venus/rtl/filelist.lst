@@ -1,0 +1,7 @@
+$HWROOT/venus/rtl/digital_top.v
+$HWROOT/venus/rtl/fpga_bus_top.v
+-f $HWROOT/adi/rtl/filelist.lst
+-f $HWROOT/vga_controller/rtl/filelist.lst
+-f $HWROOT/sdram_controller/rtl/filelist.lst
+$HWROOT/common/rtl/wb_spram_wrap.v
+$HWROOT/common/rtl/spram.v

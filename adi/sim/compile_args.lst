@@ -1,0 +1,1 @@
+-sv -hazards -timescale "1 ns / 1 ps" -incr -novopt +define+TB=TB_ADI +define+EPP_MASTER=TB_ADI.epp_master_bfm +define+RST=TB_ADI.RstSync
